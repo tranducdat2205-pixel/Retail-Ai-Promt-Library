@@ -70,3 +70,130 @@ material risks, numerical accuracy or governance.
 - Highlight outstanding management decisions.
 - Require upstream source references.
 - Preserve human verification and approval status.
+## Version 1.1 — Retesting
+
+### Test Environment
+
+- Tool: ChatGPT Temporary Chat
+- Input: Same P09 v1.1 management recommendations report
+- Data source: Synthetic retail business scenario
+
+### Observed Results
+
+- Checked upstream metrics preserved: 15/15
+- Report sections: 5
+- Priority management actions: 4
+- Critical inventory exception: Preserved
+- Policy conflicts: 2
+- Calculated replenishment: 960 units
+- Pending standard approval: 913 units
+- Pending policy decision: 47 units
+- Authorised replenishment: 0 units
+- Source prompt references: Present
+- Interactive checklists: None
+- Human verification: Required
+- Management approval: Outstanding
+
+### Information Compression Evaluation
+
+| Metric | v1.0 | v1.1 |
+|---|---:|---:|
+| Approximate word count | 1189 | 338 |
+| Report sections | 8 | 5 |
+| Priority actions | 7 | 4 |
+| Checked metrics preserved | 15/15 | 15/15 |
+| Policy conflicts preserved | 2/2 | 2/2 |
+
+Approximate word-count reduction: 71.57%.
+
+The word count includes headings, table
+content and final assessment status while
+excluding standalone formatting symbols.
+
+Word counts may vary slightly depending
+on the counting convention applied.
+
+### Word Limit Verification
+
+Maximum permitted words: 350
+Observed approximate word count: 338
+
+Result: PASS
+
+### Iteration Audit Log
+
+| Change Made | Observed Effect |
+|---|---|
+| Introduced a 350-word limit | Reduced report length to approximately 338 words |
+| Standardised report structure | Reduced eight sections to five |
+| Defined mandatory metrics | Preserved all fifteen checked metrics |
+| Limited priority actions | Selected four management actions |
+| Required source references | Improved evidence traceability |
+| Preserved material risks | Retained critical inventory and policy exceptions |
+| Required decision-focused reporting | Highlighted outstanding executive decisions |
+| Restricted new recommendations | Preserved upstream management actions |
+| Maintained approval controls | No purchasing authorisation granted |
+
+### Governance Verification
+
+- Canvas Bag zero-inventory exception preserved.
+- Oxford Shirt policy conflict: 30 units.
+- Chinos policy conflict: 17 units.
+- Total conflicting replenishment: 47 units.
+- Retain, defer and revise options preserved.
+- No policy option selected.
+- No calculated quantities modified.
+- No purchasing decisions authorised.
+
+### Evaluation Scores
+
+| Criterion | v1.0 | v1.1 |
+|---|---:|---:|
+| Faithfulness | 5 | 5 |
+| Completeness | 5 | 5 |
+| Format Compliance | 3 | 5 |
+| Business Usability | 3 | 4 |
+| Risk Control | 5 | 5 |
+| Total | 21/25 | 24/25 |
+
+These are qualitative evaluation scores
+based on observed prototype outputs.
+
+Faithfulness was assessed against P09
+rather than independently verified
+original business records.
+
+### Lesson Learned
+
+Effective executive communication
+requires selective information compression
+without sacrificing material risks,
+numerical accuracy or decision authority.
+
+Structured word limits and mandatory
+information requirements can improve
+reporting efficiency.
+
+Shorter reports do not automatically
+guarantee better management decisions.
+
+### Remaining Limitations
+
+- Testing was limited to one synthetic scenario.
+- Missing-report scenarios remain untested.
+- Conflicting upstream information remains untested.
+- Some technical terminology remains in the report.
+- Executive readability was not independently tested
+  with actual senior management.
+- Actual time savings and business outcomes
+  have not been measured.
+- Independent source-data verification remains necessary.
+- No automated reporting integration was implemented.
+
+### Final Decision
+
+Retain v1.1 for the proposed prototype
+workflow because it demonstrated improved
+information compression, structured executive
+communication and preservation of material
+business risks and approval controls.
