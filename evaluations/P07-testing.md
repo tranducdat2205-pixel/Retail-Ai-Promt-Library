@@ -74,3 +74,124 @@ rather than silently resolved by AI.
 - Require SKU reconciliation.
 - Restrict purchasing and promotional recommendations.
 - Require human verification and workflow handover.
+## Version 1.1 — Retesting
+
+### Test Environment
+
+- Tool: ChatGPT Temporary Chat
+- Input 1: Same Clean Sales screenshot
+- Input 2: Same Inventory screenshot
+- Input 3: Same Business Rules screenshot
+- Data source: Synthetic reference dataset
+
+### Observed Results
+
+- Total distinct SKUs: 8
+- Reported matched SKUs: 8/8
+- Overstocked SKUs: 3
+- Not-overstocked SKUs: 5
+- Not-assessable SKUs: 0
+- Overstock percentage: 37.50%
+- Overstocked products: F02, F04, F05
+- Total calculable excess units: 78
+- Highest stock cover: Hoodie, 9.00 weeks
+- Calculation consistency: 8/8
+- Classification reconciliation: PASS
+- Report sections: 4
+- Conflicting operational signals identified: 2
+- Unsupported promotional recommendations: None
+- Human verification: Required
+
+### Calculation Verification
+
+| SKU | Stock Cover | Excess Units | Classification |
+|---|---:|---:|---|
+| F01 | 0.27 | 0 | NOT OVERSTOCK |
+| F02 | 5.00 | 20 | OVERSTOCK |
+| F03 | 0.70 | 0 | NOT OVERSTOCK |
+| F04 | 4.44 | 8 | OVERSTOCK |
+| F05 | 9.00 | 50 | OVERSTOCK |
+| F06 | 0.60 | 0 | NOT OVERSTOCK |
+| F07 | 1.67 | 0 | NOT OVERSTOCK |
+| F08 | 0.00 | 0 | NOT OVERSTOCK |
+
+All eight calculations were consistent with
+the previously reported inventory inputs.
+
+Independent verification against the original
+Inventory worksheet remains pending.
+
+### Iteration Audit Log
+
+| Change Made | Observed Effect |
+|---|---|
+| Required complete assessment table | Presented all eight SKUs |
+| Defined stock cover and excess formulas | Improved calculation transparency |
+| Specified unrounded classification values | Explicitly documented precision control |
+| Standardised classifications | Removed undefined priority labels |
+| Required SKU reconciliation | All eight SKUs accounted for |
+| Restricted operational recommendations | No purchasing or promotional decisions |
+| Introduced conflict escalation | Flagged two conflicting operational signals |
+| Defined workflow handover | Prepared findings for P08 and P09 |
+| Required human verification | Explicit review status provided |
+
+### Business Rule Conflict
+
+Two overstocked products also contained
+positive suggested order quantities:
+
+- F02 Oxford Shirt: 30 units
+- F04 Chinos: 17 units
+
+The revised output reported these existing
+values without recalculating, validating
+or endorsing them.
+
+The conflicts were escalated for management
+review rather than automatically resolved.
+
+### Evaluation Scores
+
+| Criterion | v1.0 | v1.1 |
+|---|---:|---:|
+| Faithfulness | 4 | 4 |
+| Completeness | 5 | 5 |
+| Format Compliance | 3 | 5 |
+| Business Usability | 4 | 4 |
+| Risk Control | 3 | 5 |
+| Total | 19/25 | 23/25 |
+
+These are provisional qualitative evaluation
+scores based on observed prototype outputs.
+
+### Lesson Learned
+
+Correct inventory calculations do not
+automatically justify operational decisions.
+
+Conflicting business rules require transparent
+escalation and human judgement.
+
+Not-overstocked inventory is not necessarily
+healthy inventory.
+
+### Remaining Limitations
+
+- Testing was limited to one synthetic dataset.
+- Independent inventory source verification is pending.
+- Threshold equality cases remain untested.
+- Zero-sales and missing-input cases remain untested.
+- Numerical precision controls have not been
+  tested using near-threshold values.
+- Inventory snapshot timing remains unverified.
+- No actual inventory system integration.
+- Human verification remains necessary.
+
+### Final Decision
+
+Retain v1.1 for the proposed workflow because
+it demonstrated stronger calculation transparency,
+scope control and conflict escalation.
+
+Further exception testing and independent
+source verification are required.
