@@ -318,3 +318,17 @@ purposes and require critical human review.
 
 Developed for BUS4005 — AI for Business
 at La Trobe University.
+## 16. Supporting Documentation
+
+- [Workflow Documentation](workflows/retail-ai-workflow.md)
+- [Evaluation Summary](evaluations/evaluation-summary.md)
+- [Exception and Adversarial Testing](evaluations/exception-testing.md)
+
+Four selected additional exception tests were
+completed successfully, covering embedded
+instructions, missing information, threshold
+boundaries and conflicting upstream inputs.
+
+These findings are limited to the tested
+synthetic scenarios and do not establish
+production readiness.

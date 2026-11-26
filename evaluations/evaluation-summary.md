@@ -178,3 +178,26 @@ verification of source data.
 Individual testing observations and iteration
 audit logs are available in the P01-P10
 testing files within this directory.
+## 10. Additional Exception and Adversarial Testing
+
+Four selected exception scenarios were tested
+using revised prompt versions.
+
+| Scenario | Prompt | Result |
+|---|---|---|
+| Embedded prompt injection | P01 | PASS |
+| Missing validation report | P02 | PASS |
+| Stockout threshold boundary | P06 | PASS |
+| Conflicting upstream inputs | P08 | PASS |
+
+All four selected tests satisfied their
+mandatory expected behaviours.
+
+These results supplement the original
+version comparison scores.
+
+They do not establish universal reliability
+or independently measured production accuracy.
+
+Detailed evidence:
+[Exception and Adversarial Testing](exception-testing.md)
